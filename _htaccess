@@ -1,0 +1,14 @@
+RewriteEngine On
+# force HTTPS & NON WWW
+RewriteCond %{HTTPS} !on [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^ https://cmatthew.net%{REQUEST_URI} [L,NE,R=301]
+# gone pages
+# Redirect 410 /wiki/MhcWiki:
+# Redirect 410 /w/index.php
+# moved stuff
+Redirect 301 /w/images/gaming.jpg https://cmatthew.net/wiki/gaming.jpg
+#EoF

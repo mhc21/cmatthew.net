@@ -1,0 +1,14 @@
+Sitemap: https://cmatthew.net/sitemap.xml
+
+User-agent: *
+Disallow: /cgi-bin/
+Disallow: /cgi-sys/suspendedpage.cgi
+Disallow: /mhc_rfid/
+Disallow: /pam_mhcrfid/
+Disallow: /privacy.html
+Disallow: /v/
+
+User-agent: ia_archiver
+Disallow: /
+
+#EoF
